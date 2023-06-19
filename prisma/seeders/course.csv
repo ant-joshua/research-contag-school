@@ -1,0 +1,201 @@
+course_id,course_code,course_name,credtis,course_teaching_method,notes
+1,BBUN01,Pancasila Dan Kewarganegaraan,2,Teori,NASIONAL
+2,PKUN08,Bahasa Inggris 1,2,Teori,Wajib
+3,PKUN02,Al Islam Kemuhammadiyahan 1,2,Teori,Wajib
+4,PKUN03,Al Islam Kemuhammadiyahan 2,2,Teori,Wajib
+5,PKUN04,Al Islam Kemuhammadiyahan 3,2,Teori,Wajib
+6,PKUN05,Al Islam Kemuhammadiyahan 4,2,Teori,Wajib
+7,PKUN10,Al Islam Kemuhammadiyahan 5,2,Teori,Wajib
+8,PKUN06,Filsafat Ilmu,2,Teori,Wajib
+9,PKUN07,Ilmu Alamiah Sosial & Budaya Dasar,2,Teori,Wajib
+10,BBUN02,Kuliah Kerja Nyata,4,Teori,Wajib
+11,KKFT02,Fisika Dan Elektronika,3,Teori,FAKULTAS
+12,KKFT03,Kalkulus 1,3,Teori,FAKULTAS
+13,KKFT04,Kalkulus 2,3,Teori,FAKULTAS
+14,PKUN09,Bahasa Inggris 2 (Teknik),2,Teori,Wajib
+15,KKFT06,Matematika Optimasi,2,Teori,Wajib
+16,KKFT07,Metodologi Penelitian,2,Teori,FAKULTAS
+17,BBFT02,Kerja Praktek,4,Teori,FAKULTAS
+18,KBFT03,Tugas Akhir,6,Teori,FAKULTAS
+19,KKNIIF01,Pengantar Teknologi Informasi,2,Teori,Wajib
+20,KKNIIF02,Struktur Data Dan Algoritma,3,Teori,Wajib
+21,KKNIIF03,Sistem Digital,3,Teori,Wajib
+22,KKNIIF05,Sistem Operasi,2,Teori,Wajib
+23,KKNIIF06,Matematika Diskrit,3,Teori,Wajib
+24,KKNIIF07,Arsitektur & Organisasi Komputer,3,Teori,Wajib
+25,KKNIIF08,Desain Grafis,3,Teori,Wajib
+26,KKNIIF09,Interaksi Manusia Dan Komputer,2,Teori,Wajib
+27,KKNIIF10,Metode Numerik,3,Teori,Wajib
+28,KKNIIF11,Pemrograman Dasar,3,Teori,Wajib
+29,KKNIIF12,Pemrograman Berorientasi Objek,3,Teori,Wajib
+30,KKNIIF13,Pemrograman Web Dasar,3,Teori,Wajib
+31,KKNIIF14,Pemrograman Java Dasar,3,Teori,Wajib
+32,KKNIIF15,Pemrograman Web Lanjut,3,Teori,Wajib
+33,KKNIIF16,Jaringan Komputer,3,Teori,Wajib
+34,KKNIIF17,Basis Data,3,Teori,Wajib
+35,KKNIIF18,Pemrograman Java Lanjut,3,Teori,Wajib
+36,KKNIIF19,Pemrograman Mobile,3,Teori,Wajib
+37,KKNIIF20,Rekayasa Perangkat Lunak,3,Teori,Wajib
+38,KKNIIF21,Keamanan Jaringan,3,Teori,Wajib
+39,KKNIIF22,Manajemen Proyek,2,Teori,Wajib
+40,KKNIIF23,Kecerdasan Buatan,2,Teori,Wajib
+41,KKNIIF24,Pemrograman Jaringan,2,Teori,Wajib
+42,KKNIIF25,Sistem Informasi,3,Teori,Wajib
+43,KKNIIF26,Pemrograman Enterprise,3,Teori,Wajib
+44,KKNIIF27,Kewirausahaan,2,Teori,Wajib
+45,KKNIIF28,Pengolahan Citra Digital,3,Teori,Wajib
+46,KKNIIF29,Pengolahan Bahasa Alami,2,Teori,Wajib
+47,KKNIIF30,Pemrograman Game,3,Teori,Wajib
+48,KKNIIF31,Komputasi Awan,2,Teori,Wajib
+49,KKNIIF32,Big Data,2,Teori,Wajib
+50,KKNIIF33,Internet Of Things,2,Teori,Wajib
+51,KKNIIF34,Kriptografi,2,Teori,Wajib
+52,KKNIIF35,Sistem Pendukung Keputusan,2,Teori,Wajib
+53,KKNIIF36,Sistem Pakar,2,Teori,Wajib
+54,KKNIIF37,Aplikasi Geografis,2,Teori,Wajib
+55,KKNIIF38,Data Mining,2,Teori,Wajib
+56,KKNIIF39,Pemrograman Paralel,2,Teori,Wajib
+57,KKNIIF40,Komputasi Simulasi,2,Teori,Wajib
+58,KKNIIF41,Etika Profesi,2,Teori,Wajib
+59,KKNIIF42,Pemrograman Logika,2,Teori,Wajib
+60,KKNIIF43,Pengolahan Data Geografis,2,Teori,Wajib
+61,KKNIIF44,Manajemen Pengetahuan,2,Teori,Wajib
+62,KKNIIF45,Pemrograman Desktop,2,Teori,Wajib
+63,KKNIIF46,Komputasi Grafis,2,Teori,Wajib
+64,KKNIIF47,Pemrograman Mobile Lanjut,2,Teori,Wajib
+65,KKNIIF48,Kecerdasan Bisnis,2,Teori,Wajib
+66,KKNIIF49,Pemrograman Fungsional,2,Teori,Wajib
+67,KKNIIF50,Analisis Big Data,2,Teori,Wajib
+68,KKNIIF51,Sistem Terdistribusi,2,Teori,Wajib
+69,KKNIIF52,Pemrograman Web Lanjut,2,Teori,Wajib
+70,KKNIIF53,Internet Of Things Lanjut,2,Teori,Wajib
+71,KKNIIF54,Pemrograman Multimedia,2,Teori,Wajib
+72,KKNIIF55,Keamanan Informasi,2,Teori,Wajib
+73,KKNIIF56,Sistem Informasi Geografis,2,Teori,Wajib
+74,KKNIIF57,Pengembangan Aplikasi Bergerak,2,Teori,Wajib
+75,KKNIIF58,Komputasi Awan Lanjut,2,Teori,Wajib
+76,KKNIIF59,Desain Antarmuka,2,Teori,Wajib
+77,KKNIIF60,Pemrograman Game Lanjut,2,Teori,Wajib
+78,KKNIIF61,Audit Sistem Informasi,2,Teori,Wajib
+79,KKNIIF62,Jaringan Sensor Nirkabel,2,Teori,Wajib
+80,KKNIIF63,Pemrograman Internet,2,Teori,Wajib
+81,KKNIIF64,Pemrograman Basis Data,2,Teori,Wajib
+82,KKNIIF65,Pemrograman Desktop Lanjut,2,Teori,Wajib
+83,KKNIIF66,Pemrograman Jaringan Lanjut,2,Teori,Wajib
+84,KKNIIF67,Sistem Pendukung Keputusan Lanjut,2,Teori,Wajib
+85,KKNIIF68,Pengolahan Bahasa Alami Lanjut,2,Teori,Wajib
+86,KKNIIF69,Pemrograman Logika Lanjut,2,Teori,Wajib
+87,KKNIIF70,Pemrograman Multimedia Lanjut,2,Teori,Wajib
+88,KKNIIF71,Pemrograman Fungsional Lanjut,2,Teori,Wajib
+89,KKNIIF72,Pemrograman Basis Data Lanjut,2,Teori,Wajib
+90,KKNIIF73,Sistem Terdistribusi Lanjut,2,Teori,Wajib
+91,KKNIIF74,Desain Antarmuka Lanjut,2,Teori,Wajib
+92,KKNIIF75,Audit Sistem Informasi Lanjut,2,Teori,Wajib
+93,KKNIIF76,Pengolahan Data Geografis Lanjut,2,Teori,Wajib
+94,KKNIIF77,Manajemen Pengetahuan Lanjut,2,Teori,Wajib
+95,KKNIIF78,Komputasi Grafis Lanjut,2,Teori,Wajib
+96,KKNIIF79,Pemrograman Enterprise Lanjut,2,Teori,Wajib
+97,KKNIIF80,Rekayasa Perangkat Lunak Lanjut,2,Teori,Wajib
+98,KKNIIF81,Sistem Informasi Lanjut,2,Teori,Wajib
+99,KKNIIF82,Kewirausahaan Lanjut,2,Teori,Wajib
+100,KKNIIF83,Data Mining Lanjut,2,Teori,Wajib
+101,KKNIIF84,Pemrograman Mobile Lanjut,2,Teori,Wajib
+102,KKNIIF85,Komputasi Awan,2,Teori,Wajib
+103,KKNIIF86,Kecerdasan Buatan,2,Teori,Wajib
+104,KKNIIF87,Jaringan Komputer,2,Teori,Wajib
+105,KKNIIF88,Rekayasa Perangkat Lunak,2,Teori,Wajib
+106,KKNIIF89,Sistem Operasi,2,Teori,Wajib
+107,KKNIIF90,Pemrograman Berorientasi Objek,2,Teori,Wajib
+108,KKNIIF91,Basis Data,2,Teori,Wajib
+109,KKNIIF92,Struktur Data,2,Teori,Wajib
+110,KKNIIF93,Pemrograman Dasar,2,Teori,Wajib
+111,KKNIIF94,Matematika Informatika,2,Teori,Wajib
+112,KKNIIF95,Logika Informatika,2,Teori,Wajib
+113,KKNIIF96,Kalkulus,2,Teori,Wajib
+114,KKNIIF97,Statistika,2,Teori,Wajib
+115,KKNIIF98,Fisika Dasar,2,Teori,Wajib
+116,KKNIIF99,Bahasa Inggris,2,Teori,Wajib
+117,KKNIIF100,Pendidikan Kewarganegaraan,2,Teori,Wajib
+118,KKNIIF101,Keterampilan Komunikasi,2,Teori,Wajib
+119,KKNIIF102,Pendidikan Agama,2,Teori,Wajib
+120,KKNIIF103,Pancasila,2,Teori,Wajib
+121,KKNIIF104,Kepemimpinan,2,Teori,Wajib
+122,KKNIIF105,Ekonomi,2,Teori,Wajib
+123,KKNIIF106,Pemrograman Web Dasar,2,Teori,Wajib
+124,KKNIIF107,Jaringan Komputer Dasar,2,Teori,Wajib
+125,KKNIIF108,Sistem Operasi Dasar,2,Teori,Wajib
+126,KKNIIF109,Basis Data Dasar,2,Teori,Wajib
+127,KKNIIF110,Struktur Data Dasar,2,Teori,Wajib
+128,KKNIIF111,Pemrograman Dasar Lanjut,2,Teori,Wajib
+129,KKNIIF112,Matematika Informatika Lanjut,2,Teori,Wajib
+130,KKNIIF113,Logika Informatika Lanjut,2,Teori,Wajib
+131,KKNIIF114,Kalkulus Lanjut,2,Teori,Wajib
+132,KKNIIF115,Statistika Lanjut,2,Teori,Wajib
+133,KKNIIF116,Fisika Dasar Lanjut,2,Teori,Wajib
+134,KKNIIF117,Bahasa Inggris Lanjut,2,Teori,Wajib
+135,KKNIIF118,Pendidikan Kewarganegaraan Lanjut,2,Teori,Wajib
+136,KKNIIF119,Keterampilan Komunikasi Lanjut,2,Teori,Wajib
+137,KKNIIF120,Pendidikan Agama Lanjut,2,Teori,Wajib
+138,KKNIIF121,Pancasila Lanjut,2,Teori,Wajib
+139,KKNIIF122,Kepemimpinan Lanjut,2,Teori,Wajib
+140,KKNIIF123,Ekonomi Lanjut,2,Teori,Wajib
+141,KKNIIF124,Algoritma dan Pemrograman,4,Teori,Wajib
+142,KKNIIF125,Struktur Data,4,Teori,Wajib
+143,KKNIIF126,Matematika Diskret,4,Teori,Wajib
+144,KKNIIF127,Arsitektur dan Organisasi Komputer,4,Teori,Wajib
+145,KKNIIF128,Sistem Operasi,4,Teori,Wajib
+146,KKNIIF129,Pemrograman Web,4,Teori,Wajib
+147,KKNIIF130,Basis Data,4,Teori,Wajib
+148,KKNIIF131,Jaringan Komputer,4,Teori,Wajib
+149,KKNIIF132,Komputasi Paralel,4,Teori,Wajib
+150,KKNIIF133,Keamanan Informasi,4,Teori,Wajib
+151,KKNIIF134,Interaksi Manusia dan Komputer,4,Teori,Wajib
+152,KKNIIF135,Kecerdasan Buatan,4,Teori,Wajib
+153,KKNIIF136,Pengolahan Citra Digital,4,Teori,Wajib
+154,KKNIIF137,Pemrograman Berbasis Framework,4,Teori,Wajib
+155,KKNIIF138,Pemrograman Jaringan,4,Teori,Wajib
+156,KKNIIF139,Rekayasa Perangkat Lunak,4,Teori,Wajib
+157,KKNIIF140,Proyek Sistem Informasi,4,Teori,Wajib
+158,KKNIIF141,Kriptografi,4,Teori,Wajib
+159,KKNIIF142,Manajemen Proyek,4,Teori,Wajib
+160,KKNIIF143,Pengujian Perangkat Lunak,4,Teori,Wajib
+161,KKNIIF144,Etika Profesi,2,Teori,Wajib
+162,KKNIIF145,Analisis dan Perancangan Sistem,4,Teori,Wajib
+163,KKNIIF146,Pemrograman Mobile,4,Teori,Wajib
+164,KKNIIF147,Analisis Data,4,Teori,Wajib
+165,KKNIIF148,Big Data,4,Teori,Wajib
+166,KKNIIF149,Pemrograman Berorientasi Objek Lanjut,4,Teori,Wajib
+167,KKNIIF150,Kompilasi,4,Teori,Wajib
+168,KKNIIF151,Pemrograman Paralel,4,Teori,Wajib
+169,KKNIIF152,Kecerdasan Komputasional,4,Teori,Wajib
+170,KKNIIF153,Komputasi Bergerak,4,Teori,Wajib
+171,KKNIIF154,Data Mining,4,Teori,Wajib
+172,KKNIIF155,Pemrograman Game,4,Teori,Wajib
+173,KKNIIF156,Komputasi Geometri,4,Teori,Wajib
+174,KKNIIF157,Pemrograman Multithreading,4,Teori,Wajib
+175,KKNIIF158,Grafika Komputer,4,Teori,Wajib
+176,KKNIIF159,Pengolahan Bahasa Alami,4,Teori,Wajib
+177,KKNIIF160,Sistem Pakar,4,Teori,Wajib
+178,KKNIIF161,Komputasi Simbolik,4,Teori,Wajib
+179,KKNIIF162,Komputasi Berbasis Jaringan,4,Teori,Wajib
+180,KKNIIF163,Sistem Temu Kembali Informasi,4,Teori,Wajib
+181,KKNIIF164,Komputasi Kognitif,4,Teori,Wajib
+182,KKNIIF165,Komputasi Evolusioner,4,Teori,Wajib
+183,KKNIIF166,Rekayasa Pengetahuan,4,Teori,Wajib
+184,KKNIIF167,Pemrosesan Data Citra,4,Teori,Wajib
+185,KKNIIF168,Pemrograman Fungsional,4,Teori,Wajib
+186,KKNIIF169,Aplikasi Mobile,4,Teori,Wajib
+187,KKNIIF170,Analisis Data Geografis,4,Teori,Wajib
+188,KKNIIF171,Pemrograman Logika,4,Teori,Wajib
+189,KKNIIF172,Optimisasi,4,Teori,Wajib
+190,KKNIIF173,Komputasi Biologi,4,Teori,Wajib
+191,KKNIIF174,Pemrograman Sistem,4,Teori,Wajib
+192,KKNIIF175,Komputasi Adaptif,4,Teori,Wajib
+193,KKNIIF176,Algoritma Paralel,4,Teori,Wajib
+194,KKNIIF177,Pemrograman Kompetitif,4,Teori,Wajib
+195,KKNIIF178,Sistem Cerdas,4,Teori,Wajib
+196,KKNIIF179,Sistem Multi Agen,4,Teori,Wajib
+197,KKNIIF180,Sistem Pendukung Keputusan,4,Teori,Wajib
+198,KKNIIF181,Pemrograman Game Lanjut,4,Teori,Wajib
+199,KKNIIF182,Interaksi Manusia dan Komputer Lanjut,4,Teori,Wajib
+200,KKNIIF183,Komputasi Musik,4,Teori,Wajib

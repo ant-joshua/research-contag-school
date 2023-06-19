@@ -1,0 +1,344 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["public", "academic"]
+}
+
+model User {
+  id                Int      @id @default(autoincrement())
+  name              String
+  email             String   @unique
+  password          String
+  Student           Student? @relation(fields: [studentStudent_id], references: [student_id])
+  studentStudent_id Int?
+  Teacher           Teacher? @relation(fields: [teacherTeacher_id], references: [teacher_id])
+  teacherTeacher_id Int?
+
+  @@schema("public")
+}
+
+model Student {
+  student_id           Int                    @id @default(autoincrement())
+  student_name         String
+  User                 User[]
+  StudentStudyGroup    StudentStudyGroup[]
+  school               School?                @relation(fields: [school_id], references: [school_id])
+  school_id            Int?
+  AcademicClassStudent AcademicClassStudent[]
+
+  @@schema("academic")
+}
+
+model Teacher {
+  teacher_id   Int     @id @default(autoincrement())
+  teacher_name String
+  User         User[]
+  school_id    Int?
+  school       School? @relation(fields: [school_id], references: [school_id])
+
+  @@schema("academic")
+}
+
+model School {
+  school_id      Int              @id @default(autoincrement())
+  school_name    String
+  students       Student[]
+  teachers       Teacher[]
+  Faculty        Faculty[]
+  StudyProgram   StudyProgram[]
+  SchoolBuilding SchoolBuilding[]
+
+  @@schema("academic")
+}
+
+model Curriculum {
+  curriculum_id      Int                  @id @default(autoincrement())
+  curriculum_name    String
+  course_offering    CourseOffering[]
+  StudyProgramCourse StudyProgramCourse[]
+  AcademicClass      AcademicClass[]
+
+  @@schema("academic")
+}
+
+model Faculty {
+  faculty_id   Int            @id @default(autoincrement())
+  faculty_name String
+  school_id    Int?
+  school       School?        @relation(fields: [school_id], references: [school_id])
+  departments  Department[]
+  StudyProgram StudyProgram[]
+
+  @@schema("academic")
+}
+
+model Department {
+  department_id   Int     @id @default(autoincrement())
+  department_name String
+  faculty         Faculty @relation(fields: [faculty_id], references: [faculty_id])
+  faculty_id      Int
+
+  @@schema("academic")
+}
+
+model SchoolProgram {
+  school_program_id          Int                          @id @default(autoincrement())
+  school_program_name        String // Regular, Accelerated, Employee ( P2K
+  school_program_code        String // REG, P2K
+  AcademicClassSchoolProgram AcademicClassSchoolProgram[]
+  Grade                      Grade[]
+  StudyGroup                 StudyGroup[]
+
+  @@schema("academic")
+}
+
+model StudyGroup {
+  study_group_id    Int                 @id @default(autoincrement())
+  study_group_name  String // A1
+  study_group_code  String // A1
+  school_program_id Int?
+  school_program    SchoolProgram?      @relation(fields: [school_program_id], references: [school_program_id])
+  students          StudentStudyGroup[]
+
+  @@schema("academic")
+}
+
+model StudyProgram {
+  study_program_id          Int                         @id @default(autoincrement())
+  study_program_name        String
+  study_program_code        String?
+  label                     String?
+  head_of_program           String?
+  faculty_id                Int?
+  faculty                   Faculty?                    @relation(fields: [faculty_id], references: [faculty_id])
+  school_id                 Int?
+  school                    School?                     @relation(fields: [school_id], references: [school_id])
+  CourseOffering            CourseOffering[]
+  StudyProgramCourse        StudyProgramCourse[]
+  AcademicClass             AcademicClass[]
+  AcademicClassStudyProgram AcademicClassStudyProgram[]
+  AcademicClassSchedule     AcademicClassSchedule[]
+
+  @@schema("academic")
+}
+
+model AcademicYear {
+  academic_year_id   Int              @id @default(autoincrement())
+  academic_year_name String
+  academic_year_code String?
+  start_date         DateTime?
+  end_date           DateTime?
+  is_active          Boolean          @default(false)
+  CourseOffering     CourseOffering[]
+  AcademicClass      AcademicClass[]
+
+  @@schema("academic")
+}
+
+model SchoolBuilding {
+  school_building_id   Int     @id @default(autoincrement())
+  school_building_name String
+  school_id            Int?
+  school               School? @relation(fields: [school_id], references: [school_id])
+  rooms                Room[]
+
+  @@schema("academic")
+}
+
+model Semester {
+  semester_id           Int                  @id @default(autoincrement())
+  semester_name         String
+  course_offerings      CourseOffering[]
+  study_program_courses StudyProgramCourse[]
+
+  @@schema("academic")
+}
+
+model StudyProgramCourse {
+  study_program_curriculum_id Int          @id @default(autoincrement())
+  study_program_id            Int
+  study_program               StudyProgram @relation(fields: [study_program_id], references: [study_program_id])
+  curriculum_id               Int
+  curriculum                  Curriculum   @relation(fields: [curriculum_id], references: [curriculum_id])
+  semester_id                 Int
+  semester                    Semester     @relation(fields: [semester_id], references: [semester_id])
+  course_id                   Int
+  course                      Course       @relation(fields: [course_id], references: [course_id])
+
+  @@schema("academic")
+}
+
+model Course {
+  course_id              Int                  @id @default(autoincrement())
+  course_name            String
+  course_code            String
+  credits                Int                  @default(0)
+  course_teaching_method String               @default("theory")
+  notes                  String?
+  course_offerings       CourseOffering[]
+  study_program_courses  StudyProgramCourse[]
+  AcademicClass          AcademicClass[]
+
+  @@schema("academic")
+}
+
+model AcademicClass {
+  class_id                   Int                          @id @default(autoincrement())
+  class_name                 String
+  class_code                 String
+  academic_year_id           Int?
+  academic_year              AcademicYear?                @relation(fields: [academic_year_id], references: [academic_year_id])
+  study_program_id           Int?
+  study_program              StudyProgram?                @relation(fields: [study_program_id], references: [study_program_id])
+  curriculum_id              Int?
+  curriculum                 Curriculum?                  @relation(fields: [curriculum_id], references: [curriculum_id])
+  course_id                  Int?
+  course                     Course?                      @relation(fields: [course_id], references: [course_id])
+  number_of_meet             Int?                         @default(0)
+  max_capacity               Int?                         @default(0)
+  start_date                 DateTime?
+  end_date                   DateTime?
+  AcademicClassStudyProgram  AcademicClassStudyProgram[]
+  AcademicClassSchoolProgram AcademicClassSchoolProgram[]
+  AcademicClassStudent       AcademicClassStudent[]
+  AcademicClassSchedule      AcademicClassSchedule[]
+
+  @@schema("academic")
+}
+
+model AcademicClassStudyProgram {
+  academic_class_study_program_id Int           @id @default(autoincrement())
+  class_id                        Int
+  class                           AcademicClass @relation(fields: [class_id], references: [class_id])
+  study_program_id                Int
+  study_program                   StudyProgram  @relation(fields: [study_program_id], references: [study_program_id])
+
+  @@schema("academic")
+}
+
+model AcademicClassSchoolProgram {
+  academic_class_college_program_id Int           @id @default(autoincrement())
+  class_id                          Int
+  class                             AcademicClass @relation(fields: [class_id], references: [class_id])
+  school_program_id                 Int
+  school_program                    SchoolProgram @relation(fields: [school_program_id], references: [school_program_id])
+
+  @@schema("academic")
+}
+
+model AcademicClassStudent {
+  academic_class_student_id Int           @id @default(autoincrement())
+  class_id                  Int
+  class                     AcademicClass @relation(fields: [class_id], references: [class_id])
+  student_id                Int
+  student                   Student       @relation(fields: [student_id], references: [student_id])
+
+  @@schema("academic")
+}
+
+model AcademicClassSchedule {
+  academic_schedule_id Int           @id @default(autoincrement())
+  class_id             Int
+  class                AcademicClass @relation(fields: [class_id], references: [class_id])
+  day                  String
+  start_time           DateTime
+  end_time             DateTime
+  room_id              Int?
+  room                 Room?         @relation(fields: [room_id], references: [room_id])
+  study_program_id     Int?
+  study_program        StudyProgram? @relation(fields: [study_program_id], references: [study_program_id])
+
+  @@schema("academic")
+}
+
+model Grade {
+  grade_id          Int           @id @default(autoincrement())
+  grade             String
+  min_score         Int           @default(0)
+  max_score         Int           @default(0)
+  notes             String?
+  school_program_id Int
+  school_program    SchoolProgram @relation(fields: [school_program_id], references: [school_program_id])
+
+  @@schema("academic")
+}
+
+model Room {
+  room_id               Int                     @id @default(autoincrement())
+  room_name             String
+  room_code             String?
+  school_building       SchoolBuilding?         @relation(fields: [school_building_id], references: [school_building_id])
+  school_building_id    Int?
+  max_capacity          Int                     @default(0)
+  AcademicClassSchedule AcademicClassSchedule[]
+
+  @@schema("academic")
+}
+
+model StudentStudyGroup {
+  student_study_group_id Int
+  student_id             Int
+  Student                Student    @relation(fields: [student_id], references: [student_id])
+  StudyGroup             StudyGroup @relation(fields: [study_group_id], references: [study_group_id])
+  study_group_id         Int
+
+  @@id([student_study_group_id, student_id, study_group_id])
+  @@schema("academic")
+}
+
+model CourseOffering {
+  course_offering_id       Int
+  course_id                Int
+  course                   Course                   @relation(fields: [course_id], references: [course_id])
+  semester_id              Int
+  semester                 Semester                 @relation(fields: [semester_id], references: [semester_id])
+  academic_year_id         Int
+  academic_year            AcademicYear             @relation(fields: [academic_year_id], references: [academic_year_id])
+  curriculum               Curriculum               @relation(fields: [curriculum_id], references: [curriculum_id])
+  curriculum_id            Int
+  study_program            StudyProgram             @relation(fields: [study_program_id], references: [study_program_id])
+  study_program_id         Int
+  course_offering_schedule CourseOfferingSchedule[]
+
+  @@id([course_offering_id, course_id, semester_id, academic_year_id])
+  @@schema("academic")
+}
+
+model CourseOfferingSchedule {
+  course_offering_schedule_id Int            @id @default(autoincrement())
+  course_offering_id          Int
+  course_id                   Int
+  semester_id                 Int
+  academic_year_id            Int
+  day                         String
+  start_time                  String
+  end_time                    String
+  course_offering             CourseOffering @relation(fields: [course_offering_id, course_id, semester_id, academic_year_id], references: [course_offering_id, course_id, semester_id, academic_year_id])
+
+  // course_offering_schedule_room CourseOfferingScheduleRoom[]
+  @@unique([course_id, semester_id, academic_year_id, course_offering_id])
+  @@schema("academic")
+}
+
+// model CourseOfferingScheduleRoom {
+//   course_offering_schedule_room_id Int                    @id @default(autoincrement())
+//   course_offering_id               Int
+//   course_offering_schedule_id      Int
+//   course_id                        Int
+//   semester_id                      Int
+//   academic_year_id                 Int
+//   room_id                          Int
+//   course_offering_schedule         CourseOfferingSchedule @relation(fields: [course_offering_schedule_id, course_offering_id, course_id, semester_id, academic_year_id], references: [course_offering_schedule_id, course_offering_id, course_id, semester_id, academic_year_id])
+//   room                             Room                   @relation(fields: [room_id], references: [room_id])
+//
+//   @@id([course_offering_schedule_room_id, course_offering_id, course_id, semester_id, academic_year_id, room_id])
+//   @@schema("academic")
+// }
